@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <!--<link href="https://fonts.googleapis.com/css?family=Gochi+Hand" rel="stylesheet">-->
+
+    <script src="https://balkangraph.com/js/latest/OrgChart.js"></script>
+
+
+    <title>NeGD OrgChart</title>
+    <style>
+        html, body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    font-family: Helvetica;
+   
+}
+
+#tree {
+    width: 100%;
+    height: 100%;
+	overflow: auto;
+}
+.field_0 {
+        font-family: Lusitana;
+        text-transform: uppercase;
+        fill: white;
+    }
+.field_1 {
+    font-family: impact;
+    text-transform: uppercase;
+    fill: white;
+}
+[node-id='1'] rect {
+        fill: rgb(43, 42, 42);
+}
+[node-id='6'] rect {
+        fill: rgb(43, 42, 42);
+}
+[node-id='7'] rect {
+        fill: rgb(43, 42, 42);
+}
+[control-expcoll-id='3'] circle {
+    fill: black;
+}
+
+ </style>
+
+</head>
+<body>
+    <script src="OrgChart.js"></script>
+
+<!--<select style="position: absolute;right: 30px;top: 10px;color: #7a7a7a;font-size: 14px;padding: 10px;background-color: #F57C00;color: #ffffff;width: 100px;z-index:2;" id="selectTemplate">
+    <option>luba</option>
+    <option>olivia</option>
+    <option>derek</option>
+    <option>diva</option>
+    <option>mila</option>
+    <option>polina</option>
+    <option>mery</option>
+    <option>rony</option>
+    <option>belinda</option>
+    <option>ula</option>
+    <option>ana</option>
+    <option>isla</option>
+    <option>deborah</option>
+</select>-->
+
+<div id="tree"></div>
+    <script>
+    
+window.onload = function () {
+    OrgChart.toolbarUI.expandAllIcon = '<img width="32" src=https://cdn.balkan.app/shared/expand.png />';
+    OrgChart.toolbarUI.fitIcon = '<img width="32" src=https://cdn.balkan.app/shared/plan.png />';
+    OrgChart.toolbarUI.zoomInIcon = '<img width="32" src=https://cdn.balkan.app/shared/zoom-out.png />';
+    OrgChart.toolbarUI.zoomOutIcon = '<img width="32" src=https://cdn.balkan.app/shared/zoom-in.png />';    
+    
+
+
+    var chart = new OrgChart(document.getElementById("tree"), {
+
+        
+        template: "luba",
+        enableDragDrop: true,
+        toolbar: {
+                zoom: true,
+                fit: true,
+                expandAll: true
+        },
+        nodeMenu: {
+            details: { text: "Details" },
+            edit: { text: "Edit" },
+            add: { text: "Add" },
+            remove: { text: "Remove" }
+        },
+        
+        expand: {
+            nodes: [2, 4],
+            allChildren: true
+        },
+        
+        layout: OrgChart.mixed,
+		 tags:{
+            "A":{
+                template:"luba"
+            },
+            "B":{
+                template:"ula"
+            },
+            "UMANG":{
+                group: true,
+                groupState: OrgChart.EXPAND,
+                template: "group_grey"
+                },
+                "Node with unique template": {                    
+                    template: "luba"
+                },
+            
+            "D":{
+                template:"belinda"
+            },
+            "DIGILOCKER & OPENFORCE":{
+                group: true,
+                groupState: OrgChart.EXPAND,
+                template: "group_grey"
+                },
+                "Node with unique template": {                    
+                    template: "luba"
+                },
+            "FINANCE":{
+                group: true,
+                groupState: OrgChart.EXPAND,
+                template: "group_grey"
+                },
+                "Node with unique template": {                    
+                    template: "luba"
+                },
+            "EXECUTIVES AND SUPPORT STAFF":{
+                group: true,
+                groupState: OrgChart.EXPAND,
+                template: "group_grey"
+                },
+                "Node with unique template": {                    
+                    template: "luba"
+                },
+            "IT SUPPORT TEAM":{
+                group: true,
+                groupState: OrgChart.EXPAND,
+                template: "group_grey"
+                },
+                "Node with unique template": {                    
+                    template: "luba"
+                },
+            "CAPACITY BUILDING":{
+                group: true,
+                groupState: OrgChart.EXPAND,
+                template: "group_grey"
+                },
+                "Node with unique template": {                    
+                    template: "luba"
+                },
+            "PROGRAMME MANAGEMENT":{
+                group: true,
+                groupState: OrgChart.EXPAND,
+                template: "group_grey"
+                },
+                "Node with unique template": {                    
+                    template: "luba"
+                },
+            "NATIONAL CENTRE OF GEO-INFORMATICS":{
+                group: true,
+                groupState: OrgChart.EXPAND,
+                template: "group_grey"
+                },
+                "Node with unique template": {                    
+                    template: "luba"
+                },
+            "RAPID ASSESSMENT SYSTEM":{
+                group: true,
+                groupState: OrgChart.EXPAND,
+                template: "group_grey"
+                },
+                "Node with unique template": {                    
+                    template: "luba"
+                },
+            "PROGRAMME MANAGEMENT INFORMATION SYSTEM":{
+                group: true,
+                groupState: OrgChart.EXPAND,
+                template: "group_grey"
+                },
+                "Node with unique template": {                    
+                    template: "luba"
+                },
+            "CAPACITY BUILDING":{
+                group: true,
+                groupState: OrgChart.EXPAND,
+                template: "group_grey"
+                },
+                "Node with unique template": {                    
+                    template: "luba"
+                },
+            "AWARENESS & COMMUNICATION":{
+                group: true,
+                groupState: OrgChart.EXPAND,
+                template: "group_grey"
+                },
+                "Node with unique template": {                    
+                    template: "luba"
+                },
+            "HUMAN RESOURCES":{
+                group: true,
+                groupState: OrgChart.EXPAND,
+                template: "group_grey"
+                },
+                "Node with unique template": {                    
+                    template: "luba"
+                },
+            "ADMINISTRATION":{
+                group: true,
+                groupState: OrgChart.EXPAND,
+                template: "group_grey"
+                },
+                "Node with unique template": {                    
+                    template: "luba"
+                },
+            "MINISTRY E- GOVERNANCE SUPPORT TEAM":{
+                group: true,
+                groupState: OrgChart.EXPAND,
+                template: "group_grey"
+                },
+                "Node with unique template": {                    
+                    template: "luba"
+                },
+            
+            "assistant": {
+                template: "luba"
+            }
+        
+			},
+        nodeBinding: {
+            img_0: "img",
+            field_0: "name",
+            field_1: "title"
+            
+        },
+nodes: [
+    { id: '1', tags:["B"], name: "Shri Abhishek Singh", title: "President & Chief Executive Officer", email: "ceo@digitalindia.gov.in" ,contact: "011-24303701" ,   img: "https://negd.gov.in/sites/default/files/styles/team_image/public/CEO.png?itok=5IsWoYmB"},
+    { id: '3', tags:["assistant"],pid: "1", name: "Prasanna Kumar Parida", title:"Executive Secretary", email:"prasanna.parida@digitalindia.gov.in" ,contact:"011-24303701",   img: ""},
+    { id: '4', tags:["assistant"],pid: "1", name: "Chandan Singh", title:"Executive Secretary", email:"chandan@digitalindia.gov.in" ,contact:"011-24303701",   img: ""},
+    { id: '5',tags:["A"], pid: "1", title: "COO/DIRECTORS"},
+    { id: '6',tags:["B"] ,pid:"5", name: "Vinay Thakur", title:"Chief Operating Officer", email:"nvinay@digitalindia.gov.in" ,contact:"011-24303700", img:"https://negd.gov.in/sites/default/files/styles/team_image/public/Vinay%20Sir.jpg?itok=nBiMd8af"},
+    { id: '7',tags:["B"] ,pid: "5", name:"Neeraj Kumar", title:"Director - Project Appraisal & Finance and Projects", email: "neeraj@digitalindia.gov.in" ,contact:"011-24303703",   img: "https://negd.gov.in/sites/default/files/styles/team_image/public/Neeraj-Sir.png?itok=XkaqSWEc"},
+    { id: '8', pid: "6", name:"Debabrata Nayak", title:"Addl. Director - DigiLocker",email:"d.nayak@digitalindia.gov.in" ,contact:"011-24303709",   img: ""},
+    { id: '9',tags:["A"], pid: "6", title: "PROGRAMME MANAGEMENT"}, 
+    { id: '10',tags:["PROGRAMME MANAGEMENT"],pid: "9", name: "Bramhanand Jha",title:"Senior Consultant",email: "bramhanand.jha@digitalindia.gov.in" ,contact:"011-24303711",   img: ""},
+    { id: '11',tags:["PROGRAMME MANAGEMENT"],pid: "9", name: "Tushar Rai",title:"Senior Consultant", email:"tushar@digitalindia.gov.in" ,contact:"011-24303759",   img: ""},
+    { id: '12',tags:["PROGRAMME MANAGEMENT"],pid: "9", name: "Reshma Agarwal",title:"Consultant",email: "reshma.agarwal@digitalindia.gov.in",   img: ""},
+    { id: '13',tags:["PROGRAMME MANAGEMENT"],pid: "9", name: "Ajeet Kumar",title:"Consultant",email:"ajit.vishen@digitalindia.gov.in" ,contact:"011-24303713",   img: ""},
+    { id: '14',tags:["A"],pid: "7", title: 'UMANG'},
+    { id: '15',tags:["UMANG"],pid: "14", name: "Anil Agarwal",	title:"Principal Consultant & Head - UMANG", email:"anil.agarwal@digitalindia.gov.in" ,contact:"011-24303782", img: ""},
+    { id: '16',tags:["UMANG"],pid: "14", name: "Amit Kumar",	title:"Senior Consultant", email:"amitkr@digitalindia.gov.in" ,contact:"011-24303704", img: ""},
+    { id: '17',tags:["UMANG"],pid: "14", name: "Pankaj Kumar Srivastava", title:"Senior Consultant", email:"pankaj.sri@digitalindia.gov.in" ,contact:"011-24303756", img: ""},
+    { id: '18',tags:["UMANG"],pid: "14", name: "Sanjay Varyani",	title:"Senior Consultant", email:"sanjayvaryani@digitalindia.gov.in", img: ""},
+    { id: '19',tags:["UMANG"],pid: "14", name: "Vikas Sheel Gupta", title:"Consultant", email:"vikas.gupta@digitalindia.gov.in" ,contact:"011-24303756", img: ""},
+    { id: '20',tags:["UMANG"],pid: "14", name: "Kriti Gupta",	title:"Tester", email:"kriti.gupta.k@digitalindia.gov.in" ,contact:"011-24303722", img: ""},
+    { id: '21',tags:["UMANG"],pid: "14", name: "Shipra Saxena",	title:"Tester", email:"shipra.saxena@digitalindia.gov.in", contact:"011-24303718", img: ""},
+    { id: '22',pid: "8", title: 'DIGILOCKER & OPENFORGE'},
+	{ id: '23',tags:["DIGILOCKER & OPENFORCE"], name: 'Amit Jain', title: "Senior Consultant", email:"amitjain@digitalindia.gov.in" ,contact:'011-24303761', pid: '22',   img: ""},
+    { id: '24',tags:["DIGILOCKER & OPENFORCE"], name: 'Amit Savant', title: 'Senior Consultant', email:'amitsavant@digitalindia.gov.in' ,contact:'011-24303735', pid: '22',   img: ""},
+    { id: '25',tags:["DIGILOCKER & OPENFORCE"], name: 'Amit Ranjan', title: 'Lead Product Architect', email:'amitranjan@digitalindia.gov.in', pid: '22',   img: ""},
+    { id: '26',tags:["DIGILOCKER & OPENFORCE"], name: 'Durga Prasad Dash', title: 'Senior Consultant', email:'durga@digitalindia.gov.in' ,contact:'011-24303758', pid: '22',   img: ""},
+    { id: '27',tags:["DIGILOCKER & OPENFORCE"], name: 'Arvind Rai', title: 'Consultant', email:'arvind@digitalindia.gov.in' ,contact:'011-24303770', pid: '22',   img: ""},
+    { id: '28',tags:["DIGILOCKER & OPENFORCE"], name: 'Ajoy Agarwal', title: 'Consultant', email:'ajoy@digitalindia.gov.in' ,contact:'011-24303752', pid: '22',   img: ""},
+    { id: '29',tags:["DIGILOCKER & OPENFORCE"], name: 'Prasoon Kumar', title: 'Consultant', email:'prasoon.k@digitalindia.gov.in' ,contact:'011-24303735', pid: '22',   img: ""},
+    { id: '30',tags:["DIGILOCKER & OPENFORCE"], name: 'Nirmit Mehrotra', title: 'Senior Business Analyst', email:'nirmit.mehrotra@digitalindia.gov.in' ,contact:'011-24303758', pid: '22',   img: ""},
+    { id: '31',tags:["DIGILOCKER & OPENFORCE"], name: 'Anand Kumar', title: 'Web Application Developer', email:'anand@digitalindia.gov.in', pid: '22',   img: ""},
+    { id: '32',tags:["DIGILOCKER & OPENFORCE"], name: 'Abhishek Kumar', title: 'System Administrator', email:'abhishekkr@digitalindia.gov.in', pid: '22',   img: ""},
+    { id: '33',tags:["DIGILOCKER & OPENFORCE"], name: 'Ankur Shukla', title: 'Web Designer', email:'ankur.s@digitalindia.gov.in', pid: '22',   img: ""},
+    { id: '34',tags:["DIGILOCKER & OPENFORCE"], name: 'Ashish Ranjan', title: 'Developer (PHP / PYTHON)', email:'ashish.ranjan@digitalindia.gov.in', pid: '22',   img: ""},
+    { id: '35',tags:["DIGILOCKER & OPENFORCE"], name: 'Ajit Kumar', title: 'Web Application Developer', email:'ajit.kumar@digitalindia.gov.in', pid: '22',   img: ""},
+    { id: '36',tags:["DIGILOCKER & OPENFORCE"], name: 'Akshay Kumar Ray', title: 'Functional Tester', email:'akshay.ray@digitalindia.gov.in', pid: '22',   img: ""},
+    { id: '37',tags:["DIGILOCKER & OPENFORCE"], name: 'Alok Ranjan', title: 'Web Application Developer', email:'alok.ranjan@digitalindia.gov.in', pid: '22',   img: ""},
+    { id: '38',tags:["DIGILOCKER & OPENFORCE"], name: 'Amit Ranjan', title: 'PHP Developer', email:'ranjan@digitalindia.gov.in', pid: '22',   img: ""},
+    { id: '39',tags:["DIGILOCKER & OPENFORCE"], name: 'Durgesh Kumar Singh', title: 'Web UX Designer', email:'durgesh.singh@digitalindia.gov.in', pid: '22',   img: ""},
+    { id: '40',tags:["DIGILOCKER & OPENFORCE"], name: 'Kuldeep Dwivedi', title: 'Android Developer',	email:"kuldeep.dwivedi@digitalindia.gov.in" ,contact:"011-24303739", pid: '22',   img: ""},
+    { id: '41',tags:["DIGILOCKER & OPENFORCE"], name: 'Moorchhana Pattanaik', title: 'Web Application Developer', email:'moorchhana@digitalindia.gov.in', pid: '22',   img: ""},
+    { id: '42',tags:["DIGILOCKER & OPENFORCE"], name: 'Neha Tuli', title: 'Software Developer', email:'neha.tuli@digitalindia.gov.in', pid: '22',   img: ""},
+    { id: '43',tags:["DIGILOCKER & OPENFORCE"], name: 'Priyank Khare', title: 'IT Analyst', email:'priyank.khare@digitalindia.gov.in' ,contact:'011-24303744', pid: '22',   img: ""},
+    { id: '44',tags:["DIGILOCKER & OPENFORCE"], name: 'Raushan Kumar Singh', title: 'System Administrator', email:'raushan@digitalindia.gov.in', pid: '22',   img: ""},
+    { id: '45',tags:["DIGILOCKER & OPENFORCE"], name: 'Sanchita Bajaj', title: 'IT Analyst', email:'sanchita@digitalindia.gov.in' ,contact:'011-24303770', pid: '22',   img: ""},
+    { id: '46',tags:["DIGILOCKER & OPENFORCE"], name: 'Srishti Srivastava', title: 'Web Application Developer', email:'srishti@digitalindia.gov.in', pid: '22',   img: ""},
+    { id: '47',tags:["DIGILOCKER & OPENFORCE"], name: 'Suman Prasad', title: 'UX Designer ', email:'suman@digitalindia.gov.in', pid: '22',   img: ""},
+    { id: '48',tags:["DIGILOCKER & OPENFORCE"], name: 'Sunil Kumar Mahato', title: 'Web Application Developer', email:'sunilkm@digitalindia.gov.in', pid: '22',   img: ""},
+    { id: '49',tags:["DIGILOCKER & OPENFORCE"], name: 'Sanjib Mitra', title: 'Business Analyst', email:'sanjibmitra@digitalindia.gov.in' ,contact:'011-24303761', pid: '22',   img: ""},
+    { id: '50',tags:["DIGILOCKER & OPENFORCE"], name: 'Naveen Chauhan', title: 'IOS Develper', email:'naveen.chauhan@digitalindia.gov.in' ,contact:'011-24303741', pid: '22',   img: ""},
+    { id: '51',tags:["DIGILOCKER & OPENFORCE"], name: 'Sandeep Kumawat', title: 'Backend Developer', email:'s.kumawat@digitalindia.gov.in', pid: '22',   img: ""},
+    { id: '52',tags:["DIGILOCKER & OPENFORCE"], name: 'Thakurdas Rautaray', title: 'Backend Developer', email:'rthakurdas@digitalindia.gov.in', pid: '22',   img: ""},
+    { id: '53',tags:["DIGILOCKER & OPENFORCE"], name: 'Jitendra Kumar', title: 'Software Developer', email:'jitendra@digitalindia.gov.in', pid: '22',   img: ""},
+    { id: '54',tags:["DIGILOCKER & OPENFORCE"], name: 'Rajiv Ranjan Ojha', title: 'Web Application Developer', email:'rajivojha@digitalindia.gov.in' ,contact:'011-24303761', pid: '22',   img: ""},
+    { id: '55',tags:["DIGILOCKER & OPENFORCE"], name: 'Indresh Singh Bhadoria', title: 'Web Application Developer', email:'indresh@digitalindia.gov.in', pid: '22',   img: ""},
+    { id: '56',tags:["DIGILOCKER & OPENFORCE"], name: 'Saurabh Kumar Pandey', title: 'Web Application Developer', email:'saurabh@digitalindia.gov.in', pid: '22',   img: ""},
+    { id: '57',tags:["DIGILOCKER & OPENFORCE"], name: 'Govind Sharma', title: 'Test Engineer', email:'govind.sharma10@digitalindia.gov.in', pid: '22',   img: ""},
+    { id: '58',tags:["DIGILOCKER & OPENFORCE"], name: 'Swati Goyal', title: 'Onboarding Support', email:'swati.goyal23@digitalindia.gov.in', pid: '22',   img: ""},
+    { id: '59',tags:["DIGILOCKER & OPENFORCE"], name: 'Anjali Kumari', title: 'Help Desk', email:'anjalikumari@digitalindia.gov.in', pid: '22',   img: ""},
+    { id: '60',tags:["DIGILOCKER & OPENFORCE"], name: 'Rajeev', title: 'Consultant' ,contact:'011- 24303715', pid: '22',   img: ""},
+    { id: '61',tags:["DIGILOCKER & OPENFORCE"], name: 'Karan', title: 'Consultant' ,contact:'011- 24303728', pid: '22',   img: ""},
+    { id: '62',tags:["DIGILOCKER & OPENFORCE"], name: 'Anoop Kumar', title: 'Consultant', email:'anoop.kumar13@digitalindia.gov.in' ,contact:'011-24303711', pid: '22',   img: ""},
+    { id: '63',tags:["A"], pid:"6", title: 'NATIONAL CENTRE OF GEO-INFORMATICS'},
+    { id: '64',tags:["NATIONAL CENTRE OF GEO-INFORMATICS"], name: 'Tushar Rai', title: 'Senior Consultant', email:'tushar@digitalindia.gov.in' ,contact:'011-24303759', pid: '63',   img: ""},
+    { id: '65',tags:["NATIONAL CENTRE OF GEO-INFORMATICS"], name: 'Shiv Gupta', title: 'Manager', email:'shiv.gupta@digitalindia.gov.in' ,contact:'011-24303759', pid: '63',   img: ""},
+    { id: '66',tags:["NATIONAL CENTRE OF GEO-INFORMATICS"], name: 'Sheena Bhalaik', title: 'Assistant Manager', email:'sheena.b@digitalindia.gov.in' ,contact:'011-24303737', pid: '63',   img: ""},
+    { id: '67',tags:["NATIONAL CENTRE OF GEO-INFORMATICS"], name: 'Ankur Shukla', title: 'Web Designer', email:'ankur.s@digitalindia.gov.in', pid: '63',   img: ""},
+    { id: '68',tags:["NATIONAL CENTRE OF GEO-INFORMATICS"], name: 'Vikas Kumar Choubey', title: 'Mobile Developer', email:'vikaschoubey@digitalindia.gov.in' ,contact:'011-24303781', pid: '63',   img: ""},
+    { id: '69',tags:["NATIONAL CENTRE OF GEO-INFORMATICS"], name: 'Md Sharfuddin Ansari', title: 'Software Developer', email:'sharfuddin@digitalindia.gov.in' ,contact:'011-24303775', pid: '63',   img: ""},
+    { id: '70',tags:["NATIONAL CENTRE OF GEO-INFORMATICS"], name: 'Rupali Rawat', title: 'GIS Expert', email:'roopali.rawat@digitalindia.gov.in' ,contact:'011-24303783', pid: '63',   img: ""},
+    { id: '71',tags:["NATIONAL CENTRE OF GEO-INFORMATICS"], name: 'Priyanka Ojha', title: 'Software Developer', email:'priyankaojha@digital.gov.in' ,contact:'011-24303775', pid: '63',   img: ""},
+    { id: '72',tags:["NATIONAL CENTRE OF GEO-INFORMATICS"], name: 'Vineet Kumar Singh', title: 'QA / Testing Expert', email:'vineet.singh@digitalindia.gov.in' ,contact:'011-24303781', pid: '63',   img: ""},
+    { id: '73',tags:["NATIONAL CENTRE OF GEO-INFORMATICS"], name: 'Rupesh Kumar', title: 'System Admin', email:'rupesh.kumar@digitalindia.gov.in', pid: '63',   img: ""},
+    { id: '74',tags:["NATIONAL CENTRE OF GEO-INFORMATICS"], name: 'Amit', title: 'Software Developer', email:'amit.bansal2211@digitalindia.gov.in', pid: '63',   img: ""},
+    { id: '75',tags:["NATIONAL CENTRE OF GEO-INFORMATICS"], name: 'Aarti Jha', title: '011-24303741', pid: '63',   img: ""},
+    { id: '76',tags:["NATIONAL CENTRE OF GEO-INFORMATICS"], name: 'Akancha Singh', title: 'Web Designer', email:'Akancha.singh@digitalindia.gov.in' ,contact:'91-8510047373', pid: '63',   img: ""},
+    { id: '77',tags:["NATIONAL CENTRE OF GEO-INFORMATICS"], name: 'Rashmi Agarwal', title: 'Software Developer', email:'rashmi.agrawal@digitalindia.gov.in' ,contact:'+91-9769496511', pid: '63',   img: ""},
+    { id: '78',tags:["NATIONAL CENTRE OF GEO-INFORMATICS"], name: 'Neelu Chaudhary', title: 'Assistant Manager', email:'neelu.chaudhary@digitalindia.gov.in' ,contact:'+91-7838659562', pid: '63',   img: ""},
+    { id: '79', pid:"7", title: 'RAPID ASSESSMENT SYSTEM'},
+    { id: '80',tags:["RAPID ASSESSMENT SYSTEM"], name: 'Rajesh Loona', title: 'Senior Consultant', email:'rajesh.loona@igitalindia.gov.in', contact:'011-24303713', pid: '79',   img: ""},
+    { id: '81',tags:["RAPID ASSESSMENT SYSTEM"], name: 'Vikash Kumar', title: 'PHP Developer', email:'vikash.kumar@digitalindia.gov.in', pid: '79',   img: ""},
+    { id: '82',tags:["RAPID ASSESSMENT SYSTEM"], name: 'Manisha Agarwal', title: 'Web Designer & Developer', email:'manisha@digitalindia.gov.in', pid: '79',   img: ""},
+    { id: '83', pid:"6", title: 'PROGRAMME MANAGEMENT INFORMATION SYSTEM'},
+	{ id: '84',tags:["PROGRAMME MANAGEMENT INFORMATION SYSTEM"], name: 'Reshma Agarwal', title: 'Consultant', email:'reshma.agarwal@digitalindia.gov.in', pid: '83',   img: ""},
+    { id: '85',tags:["PROGRAMME MANAGEMENT INFORMATION SYSTEM"], name: 'Sugandha Kapoor', title: 'Software Developer', email:'sugandha@digitalindia.gov.in', contact:'011-24303780', pid: '83',   img: ""},
+    { id: '86',tags:["PROGRAMME MANAGEMENT INFORMATION SYSTEM"], name: 'Deepak Kumar', title: 'UI/ UX Designer', email:'deepak.bemaad@digitalindia.gov.in', contact:'011-24303781', pid: '83',   img: ""},
+    { id: '87',tags:["PROGRAMME MANAGEMENT INFORMATION SYSTEM"], name: 'Anusha Gupta', title: 'Software Engineer', email:'anusha.gupta@digitalindia.gov.in', contact:'011-24303774', pid: '83',   img: ""},
+    { id: '88',tags:["PROGRAMME MANAGEMENT INFORMATION SYSTEM"], name: 'Rajeev Kumar', title: 'PHP Developer', email:'rajeev.kumar@digitalindia.gov.in', contact:'011-24303775', pid: '83',   img: ""},
+    { id: '89',tags:["PROGRAMME MANAGEMENT INFORMATION SYSTEM"], name: 'Raghvender Singh', title: 'Software Developer', email:'raghvender.singh7@digitalindia.gov.in', contact:'011-24303774', pid: '83',   img: ""},
+    { id: '90',tags:["PROGRAMME MANAGEMENT INFORMATION SYSTEM"], name: 'Dhara', title: 'Software Developer', email:'dhara.sd03@nic.in', contact:'011-24303780', pid: '83',   img: ""},
+    { id: '91',tags:["PROGRAMME MANAGEMENT INFORMATION SYSTEM"], name: 'Chandra Mohan Dubey', title: 'Software Developer', email:'chander@digitalindia.gov.in', contact:'011-24303783', pid: '83',   img: ""},
+    { id: '92',tags:["PROGRAMME MANAGEMENT INFORMATION SYSTEM"], name: 'Ramu Kumar', title: 'Data Entry Operator to Dir.(Projects)', email:'ramu.k@digitalindia.gov.in', contact:'011-24303750', pid: '83',   img: ""},
+	{ id: '93', pid:"6", title: 'CAPACITY BUILDING'},
+    { id: '94',tags:["CAPACITY BUILDING"], name: 'Shilohu Rao NJP', title: 'General Manager - Capacity Building/ RTI/ Public Grievance Cell', email:'shilohu.digitalindia.gov.in', contact:'011- 24303787', pid: '93',   img: ""},
+    { id: '95',tags:["CAPACITY BUILDING"], name: 'Ruchee Arora', title: 'Consultant', email:'ruchee.arora@digitalindia.gov.in', contact:'011-24303751', pid: '93',   img: ""},
+    { id: '96',tags:["CAPACITY BUILDING"], name: 'Pooja Kandpal Singh', title: 'Consultant', email:'pooja.kandpal@digitalindia.gov.in', contact:'011-24303757', pid: '93',   img: ""},
+    { id: '97',tags:["CAPACITY BUILDING"], name: 'Vinay Singh', title: 'Consultant', email:'vinay.singh@digitalindia.gov.in', contact:'011-24303784', pid: '93',   img: ""},
+    { id: '98',tags:["CAPACITY BUILDING"], name: 'Mohd. Firoj', title: 'Manager - KMS/ RTI / Public Grievance', email:'firoz@digitalindia.gov.in', contact:'011-24303785', pid: '93',   img: ""},        
+	{ id: '99',tags:["CAPACITY BUILDING"], name: 'Bhumika Suri', title: 'e-Learning Specialist', email:'bhumika.suri@digitalindia.gov.in', contact:'011-24303786', pid: '93',   img: ""},
+    { id: '100',tags:["CAPACITY BUILDING"], name: 'Vimal Sharma', title: 'Consultant - LMS', email:'vimal.sharma@digitalindia.gov.in', contact:'011-24303785', pid: '93',   img: ""},
+    { id: '101',tags:["A"], pid:"6", title: 'AWARENESS & COMMUNICATION'},
+    { id: '102',tags:["AWARENESS & COMMUNICATION"], name: 'Barnali Mukherjee', title:'Lead Consultant', email:'barnali@digitalindia.gov.in', email:'011-24303753', pid: '101',   img: ""},
+    { id: '103',tags:["AWARENESS & COMMUNICATION"], name: 'Pranjal Jyoti Kalita', title: 'Consultant Specialist', email:'pranjal.kalita@digitalindia.gov.in', email:'011-24303729', pid: '101',   img: ""},
+    { id: '104',tags:["AWARENESS & COMMUNICATION"], name: 'Shailendra Saxena', title: 'Deputy General Manager', email:'shailsaxena@digitalindia.gov.in', email:'011-24303727', pid: '101',   img: ""},
+    { id: '105',tags:["AWARENESS & COMMUNICATION"], name: 'Priyanka Monga', title: 'Consultant', email:'priyanka.monga@digitalindia.gov.in', email:'011-24303726', pid: '101',   img: ""},
+    { id: '106',tags:["AWARENESS & COMMUNICATION"], name: 'Anuj Kaushal', title: 'Manager', email:'anuj@digitalindia.gov.in', email:'011-24303730', pid: '101',   img: ""},
+    { id: '107',tags:["AWARENESS & COMMUNICATION"], name: 'Payel Bhattacharjee', title: 'Consultant', email:'payel@digitalindia.gov.in', email:'011-24303753', pid: '101',   img: ""},
+    { id: '108',tags:["AWARENESS & COMMUNICATION"], name: 'Zaara Qamar', title: 'Consultant', email:'zaara.qamar@digitalindia.gov.in', email:'+91 9910085359', pid: '101',   img: ""},
+    { id: '109',tags:["AWARENESS & COMMUNICATION"], name: 'Charu Sharma', title: 'Assistant Manager', email:'charu.sharma@digitalindia.gov.in', email:'011-24303757', pid: '101',   img: ""},
+    { id: '110',tags:["AWARENESS & COMMUNICATION"], name: 'Kanwarjot Singh', title: 'Manager', email:'kanwarjot@digitalindia.gov.in', email:'011-24303750', pid: '101',   img: ""},
+    { id: '111',tags:["AWARENESS & COMMUNICATION"], name: 'Vibhash Kumar', title: 'Developer', email:'vibhash.kumar.di@digitalindia.gov.in', email:'011-24303717', pid: '101',   img: ""},
+    { id: '112',tags:["AWARENESS & COMMUNICATION"], name: 'Suraj Arora', title: 'Sr Graphic Designer', email:'suraj@digitalindia.gov.in', email:'011-24303749', pid: '101',   img: ""},
+    { id: '113',tags:["A"], pid:"7", title: 'FINANCE'},
+	{ id: '114',tags:["FINANCE"], name: 'G R Sharma', title: 'Senior General Manager', email:'grsharma@digitalindia.gov.in', contact:'011-2430370', pid: '113',   img: ""},
+    { id: '115',tags:["FINANCE"], name: 'G. N. Kalia', title: 'General Manager', email:'gn.kalia@digitalindia.gov.in, gn.kalia@nic.in', contact:'011-24303755', pid: '113',   img: ""},
+    { id: '116',tags:["FINANCE"], name: 'Jagmohan Dhoundiyal', title: 'Consultant', email:'jagmohan.dh@digitalindia.gov.in', contact:'011-24303731', pid: '113',   img: ""},
+    { id: '117',tags:["FINANCE"], name: 'Ranjan Kumar', title: 'Consultant', email:'ranjank@digitalindia.gov.in', contact:'011-24303734', pid: '113',   img: ""},
+    { id: '118',tags:["A"], pid:"6", title: 'HUMAN RESOURCES'},
+    { id: '119',tags:["HUMAN RESOURCES"], name: 'R.A. Dhawan', title: 'Senior General Manager(Admin & HR)', email:'r.dhawan@digitalindia.gov.in, r.dhawan@meity.gov.in', contact:'011-24303707', pid: '118',   img: ""},
+    { id: '120',tags:["HUMAN RESOURCES"], name: 'Manoj Bhagat', title: 'Senior Consultant', email:'manojbhagat@digitalindia.gov.in', contact:'011-24303752', pid: '118',   img: ""},
+    { id: '121',tags:["HUMAN RESOURCES"], name: 'Sagorika Shau', title: 'Consultant', email:'sagorika.shau@digitalindia.gov.in', contact:'011-24303740', pid: '118',   img: ""}, 
+    { id: '122',tags:["A"], pid:"6", title: 'ADMINISTRATION'},
+	{ id: '123',tags:["ADMINISTRATION"], name: 'R.A. Dhawan', title: 'Senior General Manager(Admin & HR)', email:'r.dhawan@digitalindia.gov.in, r.dhawan@meity.gov.in', contact:'011-24303707', pid: '122',   img: ""},
+    { id: '124',tags:["A"], pid:"6", title: 'MINISTRY E- GOVERNANCE SUPPORT TEAM'},
+    { id: '125',tags:["MINISTRY E- GOVERNANCE SUPPORT TEAM"], name: 'Chittaranjan Sawaijam', title: 'Consultant', email:'chittaranjan@digitalindia.gov.in', contact:'+91 9999278684', pid: '124',   img: ""},
+    { id: '126',tags:["MINISTRY E- GOVERNANCE SUPPORT TEAM"], name: 'Priya Sharma', title: 'Consultant', email:'priya.sharma@digitalindia.gov.in	', pid: '124',   img: ""},
+    { id: '127',tags:["A"], pid:"6", title: 'IT SUPPORT TEAM'},
+    { id: '128',tags:["IT SUPPORT TEAM"] ,name: 'Jai Rohilla', title: 'Consultant', email:'satya@digitalindia.gov.in', contact:'011-24303751', pid: '127',   img: ""},
+    { id: '129',tags:["IT SUPPORT TEAM"] ,name: 'Amit Kumar', title: 'Administrator', email:'amit.negd@gmail.com', contact:'011-24303737', pid: '127',   img: ""},
+    { id: '130',tags:["A"], pid:"6", title: 'EXECUTIVES AND SUPPORT STAFF'},
+    { id: '131',tags:["EXECUTIVES AND SUPPORT STAFF"], name: 'Anita Sharma', title: 'Senior EA to Senior General Manager (Capacity Building, Finance & HR)', email:'anitasharma@digitalindia.gov.in', contact:'011-24303702', pid: '130',   img: ""},
+    { id: '132',tags:["EXECUTIVES AND SUPPORT STAFF"], name: 'Kusum Rawat', title: 'Senior EA to Addl Director (DigiLocker)', email:'kusum@digitalindia.gov.in', contact:'011-24303709', pid: '130',   img: ""},
+    { id: '133',tags:["EXECUTIVES AND SUPPORT STAFF"], name: 'Anu Sharma', title: 'Senior Executive to Sr General Manager (HR & Admin)', email:'anu.sharma@digitalindia.gov.in', contact:'011-24303707', pid: '130',   img: ""},
+    { id: '134',tags:["EXECUTIVES AND SUPPORT STAFF"], name: 'Brijesh Singh', title: 'Senior Executive Assistant (Support to Ministry)', email:'brijesh.singh@digitalindia.gov.in', contact:'011-30481639', pid: '130',   img: ""},
+    { id: '135',tags:["EXECUTIVES AND SUPPORT STAFF"], name: 'Meena Jawa', title: 'Executive Secretary to Dir (Finance)', email:'meenajawa@digitalindia.gov.in', contact:'011-24303703/011- 24303716', pid: '130',   img: ""},
+    { id: '136',tags:["EXECUTIVES AND SUPPORT STAFF"], name: 'Dharmender Kumar', title: 'Senior Executive Assistant (Admin)', email:'dharmender@digitalindia.gov.in', contact:'011-24303725', pid: '130',   img: ""},
+    { id: '137',tags:["EXECUTIVES AND SUPPORT STAFF"], name: 'RupKumar Sheet', title: 'Executive Assistant to Dir (Projects)', email:'rupkumar@digitalindia.gov.in', contact:'011-24303700', pid: '130',   img: ""},
+    { id: '138',tags:["EXECUTIVES AND SUPPORT STAFF"], name: 'Avinash Kaur', title: 'Executive Assistant (HR)', email:'anvinash.kaur@digitalindia.gov.in', contact:'011-24303740', pid: '130',   img: ""},
+    { id: '139',tags:["EXECUTIVES AND SUPPORT STAFF"], name: 'Sameer K Joshi', title: 'Assistant Manager (Admin)', email:'sameerk.joshi@digitalindia.gov.in', contact:'011-24303777', pid: '130',   img: ""},
+    { id: '140',tags:["EXECUTIVES AND SUPPORT STAFF"], name: 'Sumit Sharma', title: 'Assistant Manager (Admin)', email:'sumitk.sharma@digitalindia.gov.in', contact:'011-24303777', pid: '130',   img: ""},
+    { id: '141',tags:["EXECUTIVES AND SUPPORT STAFF"], name: 'Deepak Mishra', title: 'Office Assistant (Admin)', email:'deepak.mishra@digitalindia.gov.in', contact:'011-24303777', pid: '130',   img: ""},
+    { id: '142',tags:["EXECUTIVES AND SUPPORT STAFF"], name: 'Savita', title:'Executive Assistant (Receptionist)', email:'savita.negd@digitalindia.gov.in', contact:'011-24303714', pid: '130',   img: ""},
+             ]
+    });
+    document.getElementById("selectTemplate").addEventListener("change", function () {
+        chart.config.template = this.value;
+        chart.draw();
+    });
+}
+
+
+    </script>
+</body>
+</html>
